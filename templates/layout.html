@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+
+	{% extends "bootstrap/base.html" %}
+
+	<head></head>
+	<body>
+		{% block content %}
+			{% with messages = get_flashed_messages() %}
+				<div class="container">
+					{% for message in messages %}
+						<div class="alert alert-warning">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							{{ message }}
+						</div>
+					{% endfor %}
+
+					{% block page_content %}{% endblock %}
+				</div>
+
+			{% endwith %}
+		{% endblock %}
+	</body>
+</html>

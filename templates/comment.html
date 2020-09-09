@@ -1,0 +1,20 @@
+
+{% from 'macros.html' import myNavbar %}
+
+{% extends "bootstrap/base.html" %}
+
+{% block title %}My Test Site{% endblock %}
+
+
+{% block navbar %}
+	{{ myNavbar() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Leave a comment</h1>
+    </div>
+</div>
+{% endblock %}
+
