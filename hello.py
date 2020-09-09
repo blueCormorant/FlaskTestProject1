@@ -34,7 +34,7 @@ def isValidPassword(password):
 
 	if stats.length < 8:
 		return False
-	if stats.uppercase < 1:
+	if stats.letters_uppercase < 1:
 		return False
 	if stats.numbers < 1:
 		return False
@@ -47,12 +47,12 @@ def flashPassword(password):
 
 	if stats.length < 8:
 		flash('Your password must be at least 8 characters long.')
-	if stats.uppercase < 1:
+	if stats.letters_uppercase < 1:
 		flash('Your password must have at least 1 uppercase character.')
 	if stats.numbers < 1:
 		flash('Your password must have at least 1 number.')
 
-def passwordCheck(password):
+def checkPassword(password):
 	if isValidPassword(password):
 		return True
 	else:
